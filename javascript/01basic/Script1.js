@@ -10,4 +10,4 @@ function wordCutter(a){
     }
 }
 
-wordCutter('abcde12345QWERT67890');
+wordCutter('abcde12345QWERT67891');

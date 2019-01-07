@@ -18,6 +18,5 @@ function brkConfirm(a){
         document.write("False");
     }
 }
-
 brkConfirm('()((())');//false
 brkConfirm("()(())");//true

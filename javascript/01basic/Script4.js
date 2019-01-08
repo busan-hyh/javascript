@@ -9,4 +9,4 @@ function countAlph(input){
     document.write(input + " 문자열 갯수는 " + sum);
 }
 
-countAlph("danawa b anana");
+countAlph("dana wa b anana");

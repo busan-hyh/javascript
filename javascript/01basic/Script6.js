@@ -14,8 +14,8 @@ function countNums(numIn){
             count += 1;
         }
     }
-    document.write(count);
+    document.write(count + "<br>");
 }
 
 countNums(15);
-//countNums(9);
+countNums(9);

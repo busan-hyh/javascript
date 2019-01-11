@@ -1,10 +1,16 @@
-var express = require('express');
-var app = express();
+var express = require('express')
+	, http = require('http')
+	, app = express()
+	, server = http.createServer(app);
 
-app.get('/', function(req,res) {
-	res.send('Hello World!');
+app.get('/', function (req, res) {
+	res.send('Hello /');
 });
 
-app.listen(3000, function() {
-	console.log('Example app on port 3000');
+app.get('/world.html', function (req, res) {
+	res.send('Hello World');
+});
+
+server.listen(3000, function() {
+	console.log('Express on port ' + server.address().port);
 });

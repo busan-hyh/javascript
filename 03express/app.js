@@ -12,7 +12,7 @@ app.listen(3000, () => console.log('Example app listening on port 3000!'))
 var mariaSql = require('mariasql');
 conn = new mariaSql();
 conn.connect({
-	host: '192.168.111.111',
+	host: '192.168.111.112',
 	port: 3306,
 	user: 'root',
 	password: '6644',

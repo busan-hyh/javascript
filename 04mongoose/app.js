@@ -1,20 +1,17 @@
-//Load Packages
-var express     = require('express');
-var app         = express();
-var bodyParser  = require('body-parser');
-var mongoose    = require('mongoose');
+var mongoose = require('mongoose');
+//모듈을 사용하려면 require를 먼저 해야한다 
+//mongoose.connect('mongodb://192.168.111.112/test');
+//몽고db 커넥트 형식
+//하지만 보안을 위해 커넥트 주소도 모듈화 한다.
+var config = require('./myModules/config.js');
+mongoose.connect(config.dbUrl());
 
-//Configure App to Use BodyParser
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
-//Configure Server Port
-var port = process.env.PORT || 8080;
-
-//Configure Router
-var router = require('./routes')(app)
-
-//Run Server
-var server = app.listen(port, function(){
-    console.log("Express server has started on port" + port)
+var db = mongoose.connection;
+//몽고db 동작 
+db.on('error', console.error.bind(console, 'connection error!'));
+//접속이 되었는지 체크 
+db.once('open', function(){
+    //접속이 되었당
+    console.log("mongo connected!");
 });
+

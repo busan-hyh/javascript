@@ -11,7 +11,7 @@ const server = http.createServer((req, res) => {
     res.statusCode = 200;//성공을 의미하는 200코드
     res.setHeader('Content-Type', 'text/plain');//이미지면 image..
     res.end('Hello World\n');//응답을 이걸로 끝내겠다! 포함문자가 body에 들어감
-  } else if (req.url === '/users') {
+  } else if (req.url === '/users') {//이렇게 분기를 주는게 라우팅
     const users = [
       {name: 'Alice'},
       {name: 'Beck'}

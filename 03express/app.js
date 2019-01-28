@@ -8,7 +8,9 @@ var app = express();
 //conn.connect();
 app.set('port', process.env.PORT || 3000);
 app.get('/', function(req, res){
-    res.send('Root');
+    //res.send('Root');
+    res.sendFile(__dirname + '/app/index.html');
+    //html문서 불러오기 
 });
 
 app.get('/persons', function(req, res){

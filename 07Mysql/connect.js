@@ -15,8 +15,9 @@ conn.query(sql, function(err, rows, fields){
     if(err){
         console.log(err);
     } else {
-        console.log('rows', rows);
-        console.log('fields', fields);
+        for(var i=0; i<rows.length; i++){
+            console.log(rows[i].uid);
+        }
     }
 })
 

@@ -1,5 +1,4 @@
 var express = require('express');
-var bodyParser = require('body-parser');
 var app = express();
 
 var mysql       = require('mysql');
@@ -13,18 +12,23 @@ var conn        = mysql.createConnection({
 });
 conn.connect();
 
-
 app.set('port', process.env.PORT || 3000);
-app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(express.json());
+app.set('view engine', 'pug');
+app.set('views', './views');
 app.locals.pretty = true;
 
+// /로가면 list.html 표시
 app.get('/', function(req, res){
-    var sql = 'SELECT uid, content FROM TODO_LIST WHERE uid=?';
-    var uid = 'test';
+
+    var sql = 'SELECT * FROM TODO_LIST WHERE seq=?';
+    var uid = '1';
     conn.query(sql, uid, function(err, rows, fields){
-        if(err) throw err;
-        res.send(rows);
+        res.render('list', {cont:rows});
+        console.log(rows);
         // 계속 buffer type으로 표시되서 당혹;
+
     });
 });
 

@@ -11,7 +11,7 @@ var conn        = mysql.createConnection({
 conn.connect();
 
 // SELECT QUERY
-var sqlSelect = 'SELECT * FROM TODO_USER';
+var sqlSelect = 'SELECT * FROM TODO_LIST';
 conn.query(sqlSelect, function(err, rows, fields){
     if(err){
         console.log(err);

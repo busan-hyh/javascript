@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 
+
 var mysql       = require('mysql');
 var dbConfig    = require('../../config/db-config.json');
 
@@ -22,13 +23,15 @@ app.locals.pretty = true;
 // /로가면 list.html 표시
 app.get('/', function(req, res){
 
-    var sql = 'SELECT * FROM TODO_LIST WHERE seq=?';
-    var uid = '1';
+    var sql = 'SELECT * FROM TODO_LIST WHERE uid=?';
+    var uid = 'test';
     conn.query(sql, uid, function(err, rows, fields){
-        res.render('list', {cont:rows});
+        //res.send(rows)
+        //res.render('listdb', {todos:rows});
+        res.render('list');
         console.log(rows);
         // 계속 buffer type으로 표시되서 당혹;
-
+        // cafe24 mySQL이 좀 다른가봄. 다른db로는 정상표시
     });
 });
 

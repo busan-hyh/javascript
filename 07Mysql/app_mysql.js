@@ -27,11 +27,9 @@ app.get('/', function(req, res){
     var uid = 'test';
     conn.query(sql, uid, function(err, rows, fields){
         //res.send(rows)
-        //res.render('listdb', {todos:rows});
-        res.render('list');
+        //res.render('list_or');
+        res.render('list', {todos:rows});
         console.log(rows);
-        // 계속 buffer type으로 표시되서 당혹;
-        // cafe24 mySQL이 좀 다른가봄. 다른db로는 정상표시
     });
 });
 

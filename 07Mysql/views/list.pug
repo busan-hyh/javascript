@@ -12,24 +12,18 @@ html
             div.input
                 input(type="text", placeholder="...")
                 span
-            div.list.do
-                ul.do
-                    li 할거목록1
-                    span X
-                    li 할거목록2
-                    span X
-            div.list.done
-                p 2019-02-15
-                ul.done
-                    li 한거 목록1
-                    span X
-                    li 한거 목록2
-                    span X
-                p 019-02-13
-                ul.done
-                    li 한거 목록1
-                    span X
-                    li 한거 목록2
-                    span X
-                    li 한거 목록2
-                    span X
+            each todo in todos
+                if todo.done == 0
+                    div.list.do
+                        ul.do
+                            li
+                                = todo.content
+                                span X
+            each todo in todos
+                if todo.done == 1
+                    div.list.done
+                        p 2019-02-15
+                        ul.done
+                            li 
+                                = todo.content
+                                span X

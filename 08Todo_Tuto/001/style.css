@@ -1,0 +1,38 @@
+.wrapper {
+    width: 400px;
+}
+.wrapper h2 {
+    background: red;
+}
+.wrapper input {
+    height: 30px;
+    float: left;
+}
+.wrapper input#text {
+    width: 235px;
+    box-sizing: border-box;
+}
+.wrapper button {
+    margin-left: 5px;
+    height: 30px;
+}
+ul, li, h3 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.wrapper ul li {
+    overflow: hidden;
+}
+.wrapper ul li h3 {
+    float: left;
+    margin-top: 20px;
+    background: greenyellow;
+}
+.wrapper ul li h3:hover {
+    background: orange;
+}
+.wrapper ul li button {
+    float: right;
+    margin-top: 20px;
+}

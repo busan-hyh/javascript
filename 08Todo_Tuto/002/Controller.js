@@ -8,12 +8,15 @@
         $(".btn-decrease").on("click", $.proxy(this.onClickDecrease, this));
         
     }
-     exports.SpinboxController = SpinboxController;
+     exports.SpinboxController = SpinboxController; 
+     // SpinboxController라는 이름으로 export
 
      SpinboxController.prototype = {
         onClickIncrease: function(){
-            this.spinboxModel.increase();
-            this.spinboxView.render(this.spinboxModel.getData());
+            this.spinboxModel.increase(); 
+            // Model의 increase()를 가져옴
+            this.spinboxView.render(this.spinboxModel.getData()); 
+            // View의 render를 가져옴(매개변수는 Model의 getData())
         },
         onClickDecrease: function(){
             this.spinboxModel.decrease();
@@ -21,4 +24,4 @@
         }
     };
  
-})(this);
+})(this); // this(window)로 export하는게 기본 구조.

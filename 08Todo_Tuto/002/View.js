@@ -1,7 +1,5 @@
 (function(exports){
-    function SpinboxView(){
-    
-    }
+    function SpinboxView(){}
      exports.SpinboxView = SpinboxView;
 
      SpinboxView.prototype = {

@@ -40,3 +40,11 @@ function removeMe(item) {
 removeall.onclick = function(){
     ul.innerHTML = "";
 }
+
+// 요걸 MVC로 나눠보면
+// 뷰 : getById(매개변수) 를 통해 document.getElementById(매개변수) 가져옴
+//      getByIdValue(매개변수) 를 통해 .value까지 가져옴
+//      createEle(매개변수) 를 통해 document.createElement(매개변수) 실행
+//      addChild(부모,자식) 를 통해 부모.appendChild(getById(자식)) 실행
+// 모 : removeItem(item) 지우기 실행..
+//      removeAll(ul) 모두 지우기 실행..

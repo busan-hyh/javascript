@@ -3,13 +3,13 @@ var router = express.Router();
 var conn = require('./conn');
 
 router.get('/', function(req,res,next){
-    res.send('show page')
     console.log('show!')
-    if(err) console.log(err);
-    conn.query('select * from TODO_LIST',function(err,row,fields){
+    var sql = 'SELECT * FROM TODO_LIST WHERE uid=?';
+    var uid = 'test';//세션에서 불러온 id값??
+    conn.query(sql, uid, function(err, rows, fields){
+        //res.render('login',{변수지정:rows}); pug view 랜더
+        //res.send('텍스트 출력');
         console.log(rows);
-        var result = JSON.stringify(rows);
-        res.send(result);
     });
 })
 

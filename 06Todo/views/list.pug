@@ -1,0 +1,30 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title ToDo List
+        style
+            include style.css
+    body
+        div.wrapper
+            div.title
+                p TODO LIST
+            div.input
+                input(type="text", placeholder="...")
+                span ↵
+            div.list.do
+                each todo in todos
+                    if todo.done == 0
+                        ul.do
+                            li
+                                = todo.content
+                                span X
+            div.list.done
+                each todo in todos
+                    if todo.done == 1
+                        p 2019-02-18
+                            ul.done
+                                li 
+                                    = todo.content
+                                    span X
+

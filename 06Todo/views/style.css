@@ -39,6 +39,10 @@ body { background: #232729; }
     top: 32px;
     right: 15px;
 }
+.login_form p {
+    margin: 92px 0 0 16px;
+    color: #475f4b;
+}
 
 /* Todo List */
 .wrapper {

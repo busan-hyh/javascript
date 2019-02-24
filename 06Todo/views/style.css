@@ -24,23 +24,23 @@ body { background: #232729; }
 }
 .login_form input:nth-child(1){
     left: 15px;
-    top: 32px;
+    top: 25px;
     padding-left: 12px;
 }
 .login_form input:nth-child(2){
     left: 15px;
-    top: 61px;
+    top: 54px;
     padding-left: 12px;
 }
 .login_form input:nth-child(3){
     float: left;
     width: 70px;
     height: 59px;
-    top: 32px;
+    top: 25px;
     right: 15px;
 }
 .login_form p {
-    margin: 92px 0 0 16px;
+    margin: 85px 0 0 16px;
     color: #475f4b;
 }
 
@@ -110,6 +110,7 @@ body { background: #232729; }
     cursor: pointer;
     float: right;
     height: 20px;
+    font-size: 20px;
 }
 .do { padding-top: 4px; }
 .done { border-radius: 0 0 15px 15px; }

@@ -8,24 +8,20 @@ html
     body
         div.wrapper
             div.title
-                p 
-                    =name
+                p #{name} 님의 TODO LIST
             div.input
                 input(type="text", placeholder="...")
                 span ↵
             div.list.do
                 each todo in doTodos
                     ul.do
-                        li
-                            = todo.content
+                        li= todo.content
                             span X
             div.list.done
                 each date in donedate
-                    p 
-                        =date.D
+                    p= date.D
                         each todo in doneTodos
-                            ul.done
-                                li 
-                                    = todo.D
-                                    span X
-
+                            - if (todo.D.toString() == date.D.toString())
+                                ul.done
+                                    li= todo.content
+                                        span X

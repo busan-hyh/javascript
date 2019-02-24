@@ -6,7 +6,7 @@ router.get('/', function(req, res, next){
     var uid = req.session.username;
     // 세션에 아이디가 있을때
     if(uid){
-        var uidTitle = uid+'님의 TODO LIST';
+        var uidTitle = uid;
 
         var sql_list = 'SELECT DATE_FORMAT(doneDate,"%Y-%m-%d") D, T.* ';
             sql_list += 'FROM `TODO_LIST` AS T WHERE uid=? ORDER BY T.doneDate DESC';
@@ -21,7 +21,7 @@ router.get('/', function(req, res, next){
                     donelists.push(dolist[i]);
                 }
             }
-            
+
             var sql_donedate = 'SELECT DATE_FORMAT(doneDate,"%Y-%m-%d") D FROM `TODO_LIST` AS T ';
             sql_donedate += 'WHERE T.done=1 And uid=? GROUP BY D ORDER BY T.doneDate DESC';
             conn.query(sql_donedate, uid, function(err,donedate,fields){

@@ -96,7 +96,7 @@
 <body>
     <div class="view">
             <ul>
-                <li><img id="imgModal" src="./img/1.jpg" alt="img1제목" width="33.333%"></li>
+                <li><img id="imgModal" src="./img/1.jpg" alt="seq번호" width="33.333%"></li>
                 <li><img id="imgModal" src="./img/2.png" width="33.333%"></li>
                 <li><img id="imgModal" src="./img/3.jpg" width="33.333%"></li>
                 <li><img id="imgModal" src="./img/4.jpg" width="33.333%"></li>
@@ -120,7 +120,7 @@ img.onclick = function(){
     modal.style.display = "block";
     modalImg.src = this.src;
     modalImg.alt = this.alt;
-    captionText.innerHTML = this.alt;
+    captionText.innerHTML = "<a href='#'>"+this.alt+"♥"+"</a>";
 }
 
 // Get the <span> element that closes the modal

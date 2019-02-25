@@ -11,7 +11,7 @@ router.get('/', function(req, res, next){
     }
 });
 
-router.post('/', function(req, res, nest){
+router.post('/', function(req, res, next){
     var uid = req.body.uid;
     var pass = req.body.pass;
     var sess = req.session;
@@ -33,7 +33,8 @@ router.post('/', function(req, res, nest){
                     res.render('login',{check:check});
                 }
             });
-        } else if(rows[0]['COUNT(*)'] == 0) {
+        }
+        if(rows[0]['COUNT(*)'] == 0) {
             //id가 없으면
             conn.query('INSERT INTO `TODO_USER`(uid,pass,ip,ldate) VALUES(?,?,INET_ATON(?),?)', [uid,pass,uip,ldate], function(err, rows, fields){
                 sess.username=uid;

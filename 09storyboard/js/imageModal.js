@@ -16,7 +16,7 @@ $(".view li>a").on("click", function () {
     altText = _indexTar.find(".myImg").attr("alt"); //이미지 경로에 alr값 찾기
 
     modal.find(".modal-content").attr("src", imgsUrl); //해당 팝업 안에 이미지 넣기
-    modal.find(".caption").text(seq+mId+yId); // 팝업 텍스트 출력, 하트누르면 온클릭 액션/ 북마크 누르면 북맠저장/ 프로필 누르면 해당 보드로 이동
+    modal.find(".caption").text("♥"+seq+" ☆"+mId+" ☎"+yId); // 팝업 텍스트 출력, 하트누르면 온클릭 액션/ 북마크 누르면 북맠저장/ 프로필 누르면 해당 보드로 이동
 
     modal.show(); //팝업 열기
 })

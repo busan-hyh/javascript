@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Noto Serif KR', serif;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 ul, ol { list-style: none; }
 a { text-decoration: none; color: #111; }
@@ -14,7 +14,7 @@ a:hover, a:active, a:focus { text-decoration:none; }
     z-index: 1;
     position: fixed;
     width: 100%;
-    height: 50px;
+    height: 46px;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
     background: rgba(222, 222, 222, 0.92);
 }
@@ -25,8 +25,8 @@ a:hover, a:active, a:focus { text-decoration:none; }
     box-sizing: border-box;
 }
 .header .menu a {
-    font-size: 18px;
-    height: 50px;
+    font-size: 16px;
+    height: 46px;
     display: block;
     float: right;
     cursor: pointer;
@@ -38,13 +38,14 @@ a:hover, a:active, a:focus { text-decoration:none; }
     background: #8e8980;
     color: #fff;
 }
-/* content */
+/* content-index */
 .content {
     position: relative;
     overflow: hidden;
     max-width: 600px;
     top: 60px;
     margin: 0 auto;
+    margin-bottom: 60px;
     background: #efefef;
 }
 .keyword {
@@ -70,14 +71,215 @@ a:hover, a:active, a:focus { text-decoration:none; }
     cursor: pointer;
     transition: 0.3s;
 }
-.view img:hover {
-    opacity: 0.7;
-}
+.view img:hover { opacity: 0.7; }
 .myImg {
     cursor: pointer;
     transition: 0.3s;
 }
 .myImg:hover { opacity: 0.7; }
+
+/* content-info */
+.sitemap {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #fff2f2;
+}
+.sitemap h3 { margin: 23px auto; }
+.qnaboard {
+    width: 100%;
+    padding: 20px 0;
+    box-sizing: border-box;
+    background: #fff;
+}
+.qnaboard table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.qnaboard table th, .qnaboard table td {
+    border-bottom: solid;
+    border-width: 1px;
+    overflow: hidden;
+    word-break: normal;
+    border-color: #cccccc;
+    font-family: arial;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    padding: 6px 0;
+}
+.qnaboard table th { border-top: 2px solid #545454; font-size: 14px; }
+.qnaboard table th:nth-child(1){ width: 6%; }
+.qnaboard table th:nth-child(2){ width: 10%; }
+.qnaboard table th:nth-child(3){ width: 75%; }
+
+.qnaboard table td:nth-child(3){ text-align: left; font-size: 14px; }
+.qnaboard tr:hover {
+    transition: 0.1s;
+    background: #f5f2f2;
+}
+.qnaboard .qnatr:hover { background: none; }
+.qnabutton a {
+    display: block;
+    width: 60px;
+    height: 30px;
+    padding-top: 3px;
+    margin: 5px 0 5px auto;
+    text-align: center;
+    transition: 0.2s;
+}
+.qnabutton a:hover, .qnadir li a:hover {
+    background: #ececec;
+    border-radius: 5px;
+}
+.qnadir { text-align: center; }
+.qnadir li { display: inline-block; }
+.qnadir li a {
+    min-width: 32px;
+    line-height: 32px;
+    display: block;
+    text-align: center;
+    transition: 0.2s;
+}
+
+/* content-login-register */
+.loginLogo {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    margin: -80px 0 0 -150px;
+}
+.loginForm {
+    position:absolute; 
+    top:50%; left:50%;
+    width: 300px;
+    height: 177px;
+    margin: -80px 0 0 -150px;
+    background: #f2f2f2;
+    border-radius: 13px;
+}
+.loginForm ul {
+    padding: 5px 10px;
+}
+.loginForm li {
+    margin: 4px 0;
+    height: 36px;
+    border-radius: 6px;
+    border: 1px solid rgba(111, 111, 111, 0.4);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.loginForm li:hover { opacity: 0.7; transition: 0.3s; }
+.loginForm li:nth-child(1){ background: #ffeb00; }
+.loginForm li:nth-child(2){ background: #00c73c; }
+.loginForm li:nth-child(3){ background: #3a559f; }
+.loginForm li:nth-child(4){ background: #50abf1; }
+.loginForm li:nth-child(1) a { color: #583f3f; }
+.loginForm li:nth-child(2) a, .loginForm li:nth-child(3) a, .loginForm li:nth-child(4) a { color: rgba(255, 255, 255, 0.9); }
+.loginForm a { display: block; }
+.loginForm img {
+    width: 34px;
+    float: left;
+}
+.loginForm span {
+    padding-left: 10px;
+    float: left;
+    width: 234px;
+    padding: 5px;
+}
+
+/* profile */
+.myProfile, .yourProfile {
+    position: relative;
+    padding-top: 10px;
+    text-align: center;
+    background: #fff;
+}
+.myProfile img, .yourProfile img {
+    border-radius: 60px;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.4);
+}
+.myProfile input {
+    border-radius: 5px;
+    padding: 7px 15px;
+    margin: 15px 2px;
+    cursor: pointer;
+    border-style: none;
+    color: #797373;
+}
+.myProfile input:hover {
+    transition: 0.2s;
+    background: #bbbbbb;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.12);
+    color: #fff;
+}
+.myProfile .secession:hover { background: #ca6767; }
+.yourProfile img { transition: .2s; }
+.yourProfile .follow {
+    transition: .2s;
+    opacity: 0;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.yourProfile:hover {
+    cursor: pointer;
+}
+.yourProfile:hover .yourlogo {
+    opacity: 0.2;
+}
+.yourProfile:hover .follow {
+    opacity: 1;
+}
+.yourProfile .star img {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* board */
+.myTab a {
+    font-size: 19px;
+    text-align: center;
+    height: 50px;
+    width: 33.333%;
+    display: block;
+    float: left;
+    cursor: pointer;
+    color: #4a4a4a;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.myTab a:hover {
+    background: #8d8c98;
+    color: #fff;
+}
+.myView {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+.myView img {
+    float: left;
+    width: 100%;
+}
+.myView span {
+    padding: 10px 9px 20px 0;
+    float: right;
+    color: #a91212;
+}
+.myView a {
+    color: #a91212;
+    border-radius: 5px;
+    padding: .5px 6.5px 2px 4px;
+}
+.myView a:hover {
+    background: #3a3838;
+    color: #fff;
+}
 
 /* The Modal (background) */
 .modal {
@@ -129,10 +331,7 @@ a:hover, a:active, a:focus { text-decoration:none; }
     text-align: center;
     color: #ccc;
     padding: 10px 0;
-    height: 150px;
+    height: 30px;
+    background: black;
 }
 
-
-.dino {
-    display: none;
-}

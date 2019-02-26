@@ -253,7 +253,7 @@ a:hover, a:active, a:focus { text-decoration:none; }
     padding: 10px;
     box-sizing: border-box;
 }
-.myTab a:hover {
+.myTab a:hover, .myTab a:active {
     background: #8d8c98;
     color: #fff;
 }
@@ -277,7 +277,7 @@ a:hover, a:active, a:focus { text-decoration:none; }
     padding: .5px 6.5px 2px 4px;
 }
 .myView a:hover {
-    background: #3a3838;
+    background: #a91212;
     color: #fff;
 }
 

@@ -24,6 +24,12 @@ a:hover, a:active, a:focus { text-decoration:none; }
     margin: 0 auto;
     box-sizing: border-box;
 }
+.header .menu .home {
+    float: left;
+}
+.header .menu .home a {
+    
+}
 .header .menu a {
     font-size: 16px;
     height: 46px;
@@ -37,6 +43,7 @@ a:hover, a:active, a:focus { text-decoration:none; }
 .header .menu a:hover {
     background: #8e8980;
     color: #fff;
+    transition: 0.2s;
 }
 /* content-index */
 .content {
@@ -86,7 +93,7 @@ a:hover, a:active, a:focus { text-decoration:none; }
     box-sizing: border-box;
     background: #fff2f2;
 }
-.sitemap h3 { margin: 23px auto; }
+.sitemap img { margin: 20px 0; }
 .qnaboard {
     width: 100%;
     padding: 20px 0;
@@ -145,18 +152,18 @@ a:hover, a:active, a:focus { text-decoration:none; }
 }
 
 /* content-login-register */
-.loginLogo {
+.login {
     position: absolute;
-    top: 38%;
-    left: 50%;
-    margin: -80px 0 0 -150px;
+    top:50%; left:50%;
+    margin: -150px 0 0 -150px;
+}
+.loginLogo a {
+    display: block;
 }
 .loginForm {
-    position:absolute; 
-    top:50%; left:50%;
+    margin-top: 20px;
     width: 300px;
-    height: 177px;
-    margin: -80px 0 0 -150px;
+    height: 176px;
     background: #f2f2f2;
     border-radius: 13px;
 }
@@ -171,7 +178,7 @@ a:hover, a:active, a:focus { text-decoration:none; }
     box-sizing: border-box;
     overflow: hidden;
 }
-.loginForm li:hover { opacity: 0.7; transition: 0.3s; }
+.loginForm li:hover { opacity: 0.7; transition: 0.3s; box-shadow: 1px 1px 6px 0px rgba(0, 0, 0, 0.2); }
 .loginForm li:nth-child(1){ background: #ffeb00; }
 .loginForm li:nth-child(2){ background: #00c73c; }
 .loginForm li:nth-child(3){ background: #3a559f; }
@@ -254,6 +261,7 @@ a:hover, a:active, a:focus { text-decoration:none; }
     box-sizing: border-box;
 }
 .myTab a:hover, .myTab a:active {
+    transition: 0.2s;
     background: #8d8c98;
     color: #fff;
 }
@@ -286,7 +294,7 @@ a:hover, a:active, a:focus { text-decoration:none; }
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 100px;
+    padding-top: 5%;
     left: 0;
     top: 0;
     width: 100%;
@@ -334,4 +342,6 @@ a:hover, a:active, a:focus { text-decoration:none; }
     height: 30px;
     background: black;
 }
-
+.caption a {
+    color: #ccc;
+}

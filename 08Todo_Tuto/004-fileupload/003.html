@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" id="myFile" onchange="showEvent(this)" />
+    <img id="myImage" width="200" src="" alt="" />
+    <script>
+        function showEvent(event) {
+            // 이미지 주소(로컬) 확인
+            console.log(event.value);
+            prv = document.getElementById("myImage")
+            prv.src = "./follow.png";
+        }
+    </script>
+</body>
+</html>

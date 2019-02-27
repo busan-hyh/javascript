@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>File Upload</title>
+</head>
+<body>
+    <input type="file" id="real-file" hidden="hidden" />
+    <button type="button" id="custom-button">Choose a File</button>
+    <span id="custom-text">No File</span>
+
+    <script type="text/javascript">
+        const realFileBtn = document.getElementById("real-file");
+        const customBtn = document.getElementById("custom-button");
+        const customTxt = document.getElementById("custom-text");
+
+        customBtn.addEventListener("click", function(){
+            realFileBtn.click();
+        });
+
+        realFileBtn.addEventListener("change", function(){
+            if(realFileBtn.value){
+                customTxt.innerHTML = realFileBtn.value;
+            } else {
+                customTxt.innerHTML = "NNNNOOOO";
+            }
+        })
+    </script>
+</body>
+</html>

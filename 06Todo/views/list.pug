@@ -5,23 +5,32 @@ html
         title ToDo List
         style
             include style.css
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js")
     body
         div.wrapper
             div.title
                 p #{name} 님의 TODO LIST
             div.input
-                input(type="text", placeholder="...")
-                span ↵
+                form(method="post")
+                    input(type="text" id="inputtext" name="inputtext" placeholder="..." maxlength="20")
+                    input(type="submit" id="inputsubmit" value="↵")
+            div.list
             div.list.do
                 each todo in doTodos
-                    ul.do
+                    ul.do#dolist
                         li= todo.content
-                            span X
+                            input(type="hidden" name="todoseq" value=todo.seq)
+                        span#del X
+            div.list
             div.list.done
                 each date in donedate
                     p= date.D
                         each todo in doneTodos
                             - if (todo.D.toString() == date.D.toString())
-                                ul.done
+                                ul#donelist
                                     li= todo.content
-                                        span X
+                                        input(type="hidden" name="todoseq" value=todo.seq)
+                                    span#del X
+        script
+            include js/changelist.js
+            include js/deletelist.js

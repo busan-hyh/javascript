@@ -24,6 +24,15 @@ var login = require('./route/login');
 app.use('/', login);
 var list = require('./route/list');
 app.use('/list', list);
+var doToDone = require('./route/doToDone');
+app.use('/doToDone', doToDone);
+var doneToDo = require('./route/doneToDo');
+app.use('/doneToDo', doneToDo);
+var delDo = require('./route/delDo');
+app.use('/delDo', delDo);
+var delDone = require('./route/delDone');
+app.use('/delDone', delDone);
+
 
 // 포트 연결
 app.listen(app.get('port'),'0.0.0.0', function(){

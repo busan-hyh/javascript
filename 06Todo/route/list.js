@@ -34,6 +34,14 @@ router.get('/', function(req, res, next){
 });
 
 router.post('/', function(req, res, next){
+    var uid = req.session.username;
+    var content = req.body.inputtext;
+    var sql = "INSERT INTO `TODO_LIST` (uid, content) VALUE (?, ?)";
+
+    conn.query(sql,[uid,content],function(err,rows,fields){
+        if(err) throw err;
+        res.redirect('/list');
+    });
 });
 
 module.exports = router;

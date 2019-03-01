@@ -21,7 +21,7 @@ router.post('/', function(req, res, next){
     conn.query('SELECT COUNT(*) FROM `TODO_USER` WHERE uid=?', uid, function(err, rows, fields){
         if(rows[0]['COUNT(*)'] == 1){
             //id가 있으면
-            conn.query('SELECT * FROM `TODO_USER` WHERE uid=? AND pass=?', [uid,pass], function(err, rows, fields){
+            conn.query('SELECT * FROM `TODO_USER` WHERE uid=? AND pass=PASSWORD(?)', [uid,pass], function(err, rows, fields){
                 if(rows[0] != null){
                     //pw가 맞으면
                     conn.query('UPDATE `TODO_USER` SET ldate=? WHERE uid=?', [ldate, uid], function(err,rows,fields){})
@@ -36,7 +36,7 @@ router.post('/', function(req, res, next){
         }
         if(rows[0]['COUNT(*)'] == 0) {
             //id가 없으면
-            conn.query('INSERT INTO `TODO_USER`(uid,pass,ip,ldate) VALUES(?,?,INET_ATON(?),?)', [uid,pass,uip,ldate], function(err, rows, fields){
+            conn.query('INSERT INTO `TODO_USER`(uid,pass,ip,ldate) VALUES(?,PASSWORD(?),INET_ATON(?),?)', [uid,pass,uip,ldate], function(err, rows, fields){
                 sess.username=uid;
                 res.redirect('/list');
             });

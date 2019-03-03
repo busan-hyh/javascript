@@ -17,14 +17,16 @@ router.post('/', function(req, res, next){
     var sess = req.session;
     var uip = req.headers['x-forwarded-for'] ||  req.connection.remoteAddress;
     var ldate = new Date();
-
+    
     conn.query('SELECT COUNT(*) FROM `TODO_USER` WHERE uid=?', uid, function(err, rows, fields){
+        if(err) throw err;
         if(rows[0]['COUNT(*)'] == 1){
             //id가 있으면
             conn.query('SELECT * FROM `TODO_USER` WHERE uid=? AND pass=PASSWORD(?)', [uid,pass], function(err, rows, fields){
+                if(err) throw err;
                 if(rows[0] != null){
                     //pw가 맞으면
-                    conn.query('UPDATE `TODO_USER` SET ldate=? WHERE uid=?', [ldate, uid], function(err,rows,fields){})
+                    conn.query('UPDATE `TODO_USER` SET ldate=? WHERE uid=?', [ldate, uid], function(err,rows,fields){ if(err) throw err; })
                     sess.username=uid;
                     res.redirect('/list');
                 } else {
@@ -37,6 +39,7 @@ router.post('/', function(req, res, next){
         if(rows[0]['COUNT(*)'] == 0) {
             //id가 없으면
             conn.query('INSERT INTO `TODO_USER`(uid,pass,ip,ldate) VALUES(?,PASSWORD(?),INET_ATON(?),?)', [uid,pass,uip,ldate], function(err, rows, fields){
+                if(err) throw err;
                 sess.username=uid;
                 res.redirect('/list');
             });

@@ -4,7 +4,6 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 
 // app 설정
-app.set('port', process.env.PORT || 3000);
 app.set('view engine', 'pug');
 app.set('views', './views');
 app.use(bodyParser.json());
@@ -35,6 +34,4 @@ app.use('/delDone', delDone);
 
 
 // 포트 연결
-app.listen(app.get('port'),'0.0.0.0', function(){
-    console.log('Express server listening on port ' + app.get('port'));
-});
+app.listen(3000);

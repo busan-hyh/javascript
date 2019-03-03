@@ -9,8 +9,9 @@ router.get('/', function(req, res, next){
         var uidTitle = uid;
 
         var sql_list = 'SELECT DATE_FORMAT(doneDate,"%Y-%m-%d") D, T.* ';
-            sql_list += 'FROM `TODO_LIST` AS T WHERE uid=? ORDER BY T.doneDate DESC';
+            sql_list += 'FROM `TODO_LIST` AS T WHERE uid=? ORDER BY T.doneDate DESC, T.seq DESC';
         conn.query(sql_list, uid, function(err,dolist,fields){
+            if(err) throw err;
             var dolists = [];
             var donelists = [];
             for(var i in dolist){
@@ -25,6 +26,7 @@ router.get('/', function(req, res, next){
             var sql_donedate = 'SELECT DATE_FORMAT(doneDate,"%Y-%m-%d") D FROM `TODO_LIST` AS T ';
             sql_donedate += 'WHERE T.done=1 And uid=? GROUP BY D ORDER BY T.doneDate DESC';
             conn.query(sql_donedate, uid, function(err,donedate,fields){
+                if(err) throw err;
                 res.render('list',{name:uidTitle, doTodos:dolists, donedate:donedate, doneTodos:donelists});
             })
         })

@@ -25,11 +25,10 @@ var CropImage = (function() {
 			allowOutsideClick: true
 		});
 		setTimeout(function(){
-			$('.sweet-alert').css('margin', function() {
-				var top = -1 * ($(this).height() / 2),
-					left = -1 * ($(this).width() / 2);
+			$('.sweet-alert').css('margin-top', function() {
+				var top = -1 * ($(this).height() / 2);
 
-				return top + 'px 0 0 ' + left + 'px';
+				return top + 'px';
 			});
 		}, 1);
 	}

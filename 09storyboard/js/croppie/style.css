@@ -212,7 +212,6 @@ pre[class*="language"] {
 /* Sweet alert modifications */
 .sweet-alert {
     width: auto;
-    max-width: 85%;
 }
 
 /* Grid - subset */

@@ -208,7 +208,7 @@ a:hover, a:active, a:focus { text-decoration:none; }
 .myProfile input {
     border-radius: 5px;
     padding: 7px 15px;
-    margin: 15px 2px;
+    margin: 7px 2px;
     cursor: pointer;
     border-style: none;
     color: #797373;
@@ -304,7 +304,7 @@ a:hover, a:active, a:focus { text-decoration:none; }
     display: none;
     position: fixed;
     z-index: 101;
-    padding-top: 5%;
+    padding-top: 15%;
     left: 0;
     top: 0;
     width: 100%;

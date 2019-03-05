@@ -276,7 +276,12 @@ pre[class*="language"] {
     .section-header h2 {
         min-width: 0;
     }
-
+    .croppie-container .cr-slider-wrap {
+        width: 28%;
+    }
+    
+}
+@media handheld, only screen and (max-width: 450px){
     .croppie-container {
         padding: 30px 0;
     }

@@ -33,6 +33,7 @@ body.stop-scrolling {
   z-index: 99999; }
   @media all and (max-width: 540px) {
     .sweet-alert {
+      padding: 17px 0;
       width: auto;
       margin-left: 0;
       margin-right: 0;

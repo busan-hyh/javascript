@@ -117,7 +117,7 @@ a:hover, a:active, a:focus { text-decoration:none; }
 .qnaboard table th { border-top: 2px solid #545454; font-size: 14px; }
 .qnaboard table th:nth-child(1){ width: 6%; }
 .qnaboard table th:nth-child(2){ width: 10%; }
-.qnaboard table th:nth-child(3){ width: 75%; }
+.qnaboard table th:nth-child(4){ width: 10%; }
 
 .qnaboard table td:nth-child(3){ text-align: left; font-size: 14px; }
 .qnaboard tr:hover {
@@ -353,4 +353,22 @@ a:hover, a:active, a:focus { text-decoration:none; }
 }
 .caption a {
     color: #ccc;
+}
+
+@media (max-width:600px) {
+    .content {
+        margin: auto 10px;
+    }
+    .qnaboard table tr th:nth-child(1){
+        display:none;
+    }
+    .qnaboard table tr td:nth-child(1){
+        display:none;
+    }
+    .modal {
+        padding-top: 25%;
+    }
+    .close {
+        right: 14px;
+    }
 }

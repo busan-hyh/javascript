@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mobileUploader</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Noto+Sans+KR" rel="stylesheet">
+    <link href="./js/croppie/croppie.css" rel="stylesheet"/>
+    <link href="./js/croppie/sweetalert.css" rel="stylesheet"/>
+    <link href="./js/croppie/style.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="mobileEditor">
+        <div class="upload-demo-wrap">
+            <div id="upload-demo"></div>
+        </div>
+        <div class="actions">
+            <a class="btn file-btn">
+                <span>업로드</span>
+                <input type="file" id="upload" value="Choose a file" accept="image/*" />
+            </a>
+            <button class="upload-result">확인</button>
+        </div>
+    </div>
+    <script src="./js/croppie/jquery.min.js"></script>
+    <script src="./js/croppie/sweetalert.min.js"></script>
+    <script src="./js/croppie/croppie.js"></script>
+    <script src="./js/croppie/script.js"></script>
+    <script src="./js/croppie/exif.js"></script>
+    <script>
+        CropImage.init();
+    </script>
+</body>
+</html>

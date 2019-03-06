@@ -43,11 +43,21 @@ a:hover, a:active, a:focus { text-decoration:none; }
     transition: 0.2s;
 }
 /* content-index */
+
 .content {
     position: relative;
     overflow: hidden;
     max-width: 600px;
     top: 60px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    background: #efefef;
+}
+.mobileEditor {
+    position: relative;
+    overflow: hidden;
+    max-width: 600px;
+    top: 0px;
     margin: 0 auto;
     margin-bottom: 60px;
     background: #efefef;

@@ -56,6 +56,7 @@ a.btn {
 }
 .open-uploader, .close-uploader { float: right; }
 .close-uploader { display: none; }
+.mobile-uploader { display: none; }
 input[type="file"] {
     cursor: pointer;
 }
@@ -72,6 +73,8 @@ button:focus {
 .upload-demo-wrap {
     display: none;
 }
+/* uploader.html에서는 항상 보이기 */
+.mobileEditor .actions a, .mobileEditor .upload-result, .mobileEditor .upload-demo-wrap { display:block; }
 
 .file-btn {
     position: relative;
@@ -285,4 +288,10 @@ pre[class*="language"] {
     .croppie-container {
         padding: 30px 0;
     }
+    .open-uploader { display: none; }
+    .mobile-uploader { 
+        display: block;
+        width: 100%;
+    }
+    .actions { background: #fff;}
 }

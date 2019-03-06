@@ -42,17 +42,22 @@ input[type="text"] {
 
 button,
 a.btn {
-    background-color: #7dc1c3;
+    background-color: #b8d5de;
     color: white;
     padding: 10px 15px;
-    border-radius: 3px;
-    border: 1px solid #219194;
+    border-radius: 7px;
+    border: 1px solid #74828F;
     font-size: 32px;
     cursor: pointer;
     text-decoration: none;
     text-shadow: none;
     display: inline-block;
     cursor: pointer;
+}
+button:hover,
+a.btn:hover {
+    background-color: #98a5b1;
+    transition: 0.2s;
 }
 .open-uploader, .close-uploader { float: right; }
 .close-uploader { display: none; }
@@ -84,7 +89,7 @@ button:focus {
 
 .actions {
     padding: 5px 0;
-    background: #93e0e2;
+    background: #96C0CE;
     height: 80px;
 }
 .actions button {

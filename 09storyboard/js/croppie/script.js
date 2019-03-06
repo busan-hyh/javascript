@@ -179,7 +179,7 @@ var CropImage = (function() {
 	            reader.readAsDataURL(input.files[0]);
 	        }
 	        else {
-		        swal("Sorry - you're browser doesn't support the FileReader API");
+		        // swal("Sorry - you're browser doesn't support the FileReader API");
 		    }
 		}
 

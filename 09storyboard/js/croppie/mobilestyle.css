@@ -47,7 +47,7 @@ a.btn {
     padding: 10px 15px;
     border-radius: 3px;
     border: 1px solid #219194;
-    font-size: 16px;
+    font-size: 32px;
     cursor: pointer;
     text-decoration: none;
     text-shadow: none;
@@ -63,17 +63,12 @@ input[type="file"] {
 button:focus {
     outline: 0;
 }
-/* open-uploader 누르면 슬라이드로 display:block */
+
 .actions a, .upload-result {
     cursor: pointer;
-    display: none;
     float: left;
     margin-left: 5px;
 }
-.upload-demo-wrap {
-    display: none;
-}
-
 
 .file-btn {
     position: relative;
@@ -90,7 +85,7 @@ button:focus {
 .actions {
     padding: 5px 0;
     background: #93e0e2;
-    height: 56px;
+    height: 80px;
 }
 .actions button {
     margin-right: 5px;
@@ -279,7 +274,9 @@ pre[class*="language"] {
         min-width: 0;
     }
     .croppie-container .cr-slider-wrap {
-        width: 28%;
+        width: 54%;
+        margin: 30px auto;
+        float: right;
     }
     
 }
@@ -294,3 +291,4 @@ pre[class*="language"] {
     }
     .actions { background: #fff;}
 }
+

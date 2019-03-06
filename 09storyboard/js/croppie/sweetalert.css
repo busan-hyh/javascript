@@ -208,6 +208,7 @@ body.stop-scrolling {
         transition-delay: 0s; }
     .sweet-alert button::-moz-focus-inner {
       border: 0; }
+    
   .sweet-alert[data-has-cancel-button=false] button {
     box-shadow: none !important; }
   .sweet-alert[data-has-confirm-button=false][data-has-cancel-button=false] {
@@ -385,8 +386,8 @@ body.stop-scrolling {
 
 @keyframes showSweetAlert {
   0% {
-    transform: scale(0.7);
-    -webkit-transform: scale(0.7); }
+    transform: scale(0.3);
+    -webkit-transform: scale(0.3); }
   45% {}
   80% {}
   100% {
@@ -458,8 +459,8 @@ body.stop-scrolling {
     top: 70%; } }
 
 .showSweetAlert[data-animation=pop] {
-  -webkit-animation: showSweetAlert 0.3s;
-  animation: showSweetAlert 0.3s; }
+  -webkit-animation: showSweetAlert 0.2s;
+  animation: showSweetAlert 0.2s; }
 
 .showSweetAlert[data-animation=none] {
   -webkit-animation: none;

@@ -106,9 +106,8 @@
 
 /* uploader page일때 */
 .mobileEditor .croppie-container .cr-slider-wrap {
-    width: 43%;
-    margin: 30px 30px 0 0;
-    float: right;
+    width: 28%;
+    margin: 30px 0px 0 231px;
 }
 
 .croppie-result {

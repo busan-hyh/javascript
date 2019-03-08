@@ -1,0 +1,84 @@
+* { margin: 0; padding: 0; font: normal 12px arial; }
+body { background: #eae3e3; }
+ul, ol { list-style: none; color: #3a3333; }
+ul { overflow: hidden; }
+a { text-decoration: none; color: #111; }
+a:hover, a:active, a:focus { text-decoration:none; }
+
+/* Login Form */
+.login_form {
+    position:absolute; 
+    top:50%; left:50%;
+    width: 300px;
+    height: 120px;
+    margin: -80px 0 0 -150px;
+    background: #f2f2f2;
+    border-radius: 13px;
+}
+.login_form input {
+    font-size: 12px;
+    line-height: 1.5;
+    width: 185px;
+    height: 26px;
+    color: #888;
+    position: absolute;
+    background: #fff;
+}
+.login_form input:nth-child(1){
+    left: 15px;
+    top: 30px;
+    padding-left: 12px;
+}
+.login_form input:nth-child(2){
+    left: 15px;
+    top: 59px;
+    padding-left: 12px;
+}
+.login_form input:nth-child(3){
+    float: left;
+    width: 70px;
+    height: 59px;
+    top: 30px;
+    right: 15px;
+    background: #20366b;
+    color: #fff;
+    border-style: hidden;
+}
+
+/* DashBoard */
+.wrapper {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.wrapper img {
+    width: 100%;
+}
+.dashboard {
+    width: 100%;
+    overflow: hidden;
+    padding: 2%;
+    box-sizing: border-box;
+}
+.dashboard a {
+    float: left;
+    display: block;
+    font-size: 3em;
+    text-align: center;
+    padding-top: 19px;
+}
+.dashbtn {
+    width: 40%;
+    height: 76px;
+    border-radius: 10px;
+    background: #20366b;
+    color: #fff;
+    margin: 5%;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.55);
+}
+.dashbtn:hover {
+    background: #dd7777;
+    transition: 0.2s;
+}
+.dashmybtn {
+    margin-top: 70px;
+}

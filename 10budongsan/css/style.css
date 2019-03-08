@@ -64,11 +64,17 @@ a:hover, a:active, a:focus { text-decoration:none; }
     display: block;
     font-size: 3em;
     text-align: center;
-    padding-top: 19px;
+    padding-top: 20px;
 }
+.dashboard a:nth-child(1) { background-image: linear-gradient(#20366b, #42426d); } 
+.dashboard a:nth-child(2) { background-image: linear-gradient(#20366b, #42426d); } 
+.dashboard a:nth-child(3) { background-image: linear-gradient(#56486f, #8c5b72); } 
+.dashboard a:nth-child(4) { background-image: linear-gradient(#56486f, #8c5b72); } 
+.dashboard a:nth-child(5) { background-image: linear-gradient(#bb6c75, #dd7777); } 
+.dashboard a:nth-child(6) { background-image: linear-gradient(#bb6c75, #dd7777); } 
 .dashbtn {
     width: 40%;
-    height: 76px;
+    height: 70px;
     border-radius: 10px;
     background: #20366b;
     color: #fff;
@@ -83,4 +89,62 @@ a:hover, a:active, a:focus { text-decoration:none; }
     margin-top: 70px;
 }
 
+
 /* Upload Card */
+.uploadrCard table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    border: 1px solid #20366b;
+    background: #fdf8f8;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.55);
+}
+.uploadrCard table, th, td {
+    border-bottom: 1px solid #20366b;
+}
+.uploadrCard td {
+    font-size: 1.7em;
+    height: 30px;
+    padding: 2px;
+}
+.uploadrCard select {
+    font-size: 1em;
+    height: 30px;
+}
+.uploadrCard input {
+    height: 30px;
+    font-size: 1em;
+}
+.uploadrCard #uploadSubmit {
+    font-size: 1.5em;
+    float: right;
+    width: 67px;
+    height: 38px;
+}
+/* #main */
+.uploadrCard #main td:nth-child(1) { width: 30%; text-align: center; }
+.uploadrCard #main tr:nth-child(4) td:nth-child(3) { width: 35%; }
+.uploadrCard #main tr:nth-child(5) input { width: 98%; }
+.uploadrCard #main tr:nth-child(6) input { width: 40%; }
+.uploadrCard #main tr:nth-child(6) td:nth-child(3) { text-align: center; width: 25%; }
+.uploadrCard #main tr:nth-child(7) input { width: 98%; }
+/* #forSale */
+.uploadrCard #forSale td:nth-child(1) { width: 30%; text-align: center; }
+.uploadrCard #forSale input { width: 35%; }
+/* #forJeonse */
+.uploadrCard #forJeonse td:nth-child(1) { width: 30%; text-align: center; }
+.uploadrCard #forJeonse input { width: 35%; }
+/* #forRent */
+.uploadrCard #forRent td:nth-child(1) { width: 30%; text-align: center; }
+.uploadrCard #forRent input { width: 35%; }
+/* #etc */
+.uploadrCard #etc td:nth-child(1) { width: 40%; text-align: center; }
+/* #connect */
+.uploadrCard #connect td { font-size: 1.4em; }
+.uploadrCard #connect input { height: 25px; }
+.uploadrCard #connect td:nth-child(1) { text-align: center; }
+.uploadrCard #connect td:nth-child(2) { text-align: center; width: 20%; }
+.uploadrCard #connect td:nth-child(2) input { width: 95%; }
+.uploadrCard #connect td:nth-child(3) input { width: 98%; }
+.uploadrCard #connect td:nth-child(4) { width: 10%; }
+.uploadrCard #connect td:nth-child(4) input { width: 98%; }

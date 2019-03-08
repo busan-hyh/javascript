@@ -21,3 +21,29 @@ $(document).ready(function(){
         }
     })
 })
+// 엔터키 막기
+$('input[type="text"]').keydown(function() {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+    }
+});
+// numberOnly 텍스트필드에 숫자만 허용하기
+$("input:text[numberOnly]").on("keyup", function() {
+    $(this).val($(this).val().replace(/[^0-9]/g,""));
+});
+// 담당자, 명의자 추가 삭제
+$('#managerPlus').bind('click', function(){
+    var managerInner = '<tr><td>담당자</td><td><input type="text"></td><td><input type="text"></td><td><input id="managerMinus" type="button" value="-" /></td></tr>';
+    $(this).closest('tr').after(managerInner);
+})
+$(document).on('click','#managerMinus',function(){
+    $(this).closest('tr').remove();
+})
+
+$('#sellerPlus').bind('click',function(){
+    var sellerInner = '<tr><td><select name="seller" id="seller"><option value="명의자">명의자</option><option value="관리자">관리자</option></select></td><td><input type="text"></td><td><input type="text"></td><td><input id="sellerMinus" type="button" value="-" /></td></tr>';
+    $(this).closest('tr').after(sellerInner);
+})
+$(document).on('click','#sellerMinus',function(){
+    $(this).closest('tr').remove();
+})

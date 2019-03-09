@@ -29,7 +29,7 @@ $('input[type="text"]').keydown(function() {
 });
 // numberOnly 텍스트필드에 숫자만 허용하기
 $("input:text[numberOnly]").on("keyup", function() {
-    $(this).val($(this).val().replace(/[^0-9]/g,""));
+    $(this).val($(this).val().replace(/[^0-9.]/g,""));
 });
 // 담당자, 명의자 추가 삭제
 $('#managerPlus').bind('click', function(){
@@ -46,4 +46,21 @@ $('#sellerPlus').bind('click',function(){
 })
 $(document).on('click','#sellerMinus',function(){
     $(this).closest('tr').remove();
+})
+// 메인카드 제곱미터 ↔ 평형
+$('.mSMeter').on('keyup',function(){
+    var mSMter = $(this).val();
+
+    $(this).siblings('input').val((mSMter*0.3025).toFixed(2));
+})
+$('.mPyung').on('keyup',function(){
+    var mPyung = $(this).val();
+
+    $(this).siblings('input').val((mPyung/0.3025).toFixed(2));
+})
+// 제곱미터 to 평형
+$(document).on('keyup','.sMeter',function(){
+    var sMeter = $(this).val();
+
+    $(this).siblings('span').text((sMeter*0.3025).toFixed(2));
 })

@@ -121,11 +121,15 @@ a:hover, a:active, a:focus { text-decoration:none; }
     width: 67px;
     height: 38px;
 }
+.uploadrCard td span {
+    font-size: 1em;
+    font-weight: 600;
+}
 /* #main */
 .uploadrCard #main td:nth-child(1) { width: 30%; text-align: center; }
 .uploadrCard #main tr:nth-child(4) td:nth-child(3) { width: 35%; }
 .uploadrCard #main tr:nth-child(5) input { width: 98%; }
-.uploadrCard #main tr:nth-child(6) input { width: 40%; }
+.uploadrCard #main tr:nth-child(6) input { width: 26%; }
 .uploadrCard #main tr:nth-child(6) td:nth-child(3) { text-align: center; width: 25%; }
 .uploadrCard #main tr:nth-child(7) input { width: 98%; }
 /* #forSale */

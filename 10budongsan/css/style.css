@@ -99,7 +99,7 @@ a:hover, a:active, a:focus { text-decoration:none; }
     background: #fdf8f8;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.55);
 }
-.uploadrCard table, th, td {
+.uploadrCard table, .uploadrCard th, .uploadrCard td {
     border-bottom: 1px solid #20366b;
 }
 .uploadrCard td {
@@ -152,3 +152,52 @@ a:hover, a:active, a:focus { text-decoration:none; }
 .uploadrCard #connect td:nth-child(3) input { width: 98%; }
 .uploadrCard #connect td:nth-child(4) { width: 10%; }
 .uploadrCard #connect td:nth-child(4) input { width: 98%; }
+
+/* list */
+.listheader { margin-bottom: 5px; }
+.listheader h2 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 5px;
+}
+.listheader select {
+    height: 35px;
+    font-size: 1.1em;
+    padding: 2px 6px;
+}
+.listheader button {
+    width: 18%;
+    height: 35px;
+    font-size: 1.1em;
+    float: right;
+    margin-left: 3px;
+}
+.list table {
+    width: 100%;
+    border-collapse: collapse; 
+    background: #fdf8f8;
+}
+.list table tr:hover {
+    background: #fff;
+}
+.list table tr th {
+    width: 17%;
+    font-size: 1.3em;
+    border-bottom: 3px solid #20366b;
+    padding: 4px 0;
+}
+.list table tr th:nth-child(3){
+    width: 32%;
+}
+.list table tr td {
+    text-align: right;
+    font-size: 1.2em;
+    border-bottom: 1px solid #20366b;
+    padding: 4px 0;
+}
+.list table tr td:nth-child(1) {
+    text-align: center;
+}
+.list table tr td:nth-child(2) {
+    text-align: center;
+}

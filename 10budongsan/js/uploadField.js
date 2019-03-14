@@ -35,17 +35,21 @@ $("input:text[numberOnly]").on("keyup", function() {
 $('#managerPlus').bind('click', function(){
     var managerInner = '<tr><td>담당자</td><td><input type="text"></td><td><input type="text"></td><td><input id="managerMinus" type="button" value="-" /></td></tr>';
     $(this).closest('tr').after(managerInner);
+    $(this).css('display','none');
 })
 $(document).on('click','#managerMinus',function(){
     $(this).closest('tr').remove();
+    $('#managerPlus').css('display','block');
 })
 
 $('#sellerPlus').bind('click',function(){
     var sellerInner = '<tr><td><select name="seller" id="seller"><option value="명의자">명의자</option><option value="관리자">관리자</option></select></td><td><input type="text"></td><td><input type="text"></td><td><input id="sellerMinus" type="button" value="-" /></td></tr>';
     $(this).closest('tr').after(sellerInner);
+    $(this).css('display','none');
 })
 $(document).on('click','#sellerMinus',function(){
     $(this).closest('tr').remove();
+    $('#sellerPlus').css('display','block');
 })
 // 메인카드 제곱미터 ↔ 평형
 $('.mSMeter').on('keyup',function(){

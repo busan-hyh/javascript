@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>매매 리스트</title>
+    <title><!-- 매매/전세/월세/임대 --> 리스트</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="wrapper">
         <div class="listheader">
-            <h2>매매 리스트</h2>
+            <h2><!-- 매매/전세/월세/임대 --> 리스트</h2>
             <select name="gu" id="gu" onchange="changeDong(this)">
                 <option>구 이름</option>
                 <option value="중구">중구</option>
@@ -43,8 +43,17 @@
                     <th>종류</th>
                     <th>주소</th>
                     <th colspan="2">크기</th>
+                    <!-- 분기시작 -->
+                    <!-- 매매 -->
                     <th>층수</th>
                     <th>매매금</th>
+                    <!-- 전세 -->
+                    <th>전세금</th>
+                    <th>관리비</th>
+                    <!-- 월세,임대 -->
+                    <th>보증금</th>
+                    <th>월세</th>
+                    <!-- 분기끝 -->
                 </tr>
                 <tr>
                     <td><input type="hidden" name="seq" value="2">

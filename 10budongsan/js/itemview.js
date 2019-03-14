@@ -1,10 +1,14 @@
 // list to view 셀렉터
 $(document).on('click','.list tr',function(){
     var seq = $(this).children('td').children('input[name=seq]').val();
-    // cate = sale / jeonsae / rent
-    var cate = $(this).children('td').children('input[name=case]').val();
     
-    location.href = './'+cate+'view.html';
+    location.href = './view.html';
+})
+// mylist to view 셀렉터
+$(document).on('click','.mylist tr',function(){
+    var seq = $(this).children('td').children('input[name=seq]').val();
+    
+    location.href = './view.html';
 })
 
 // 제곱미터 to 평형

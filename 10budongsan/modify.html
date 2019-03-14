@@ -14,7 +14,12 @@
             <form action="#" method="POST">
                 <table id="main">
                     <tr>
-                        <td colspan="3">물건 업로드</td>
+                        <td>진행상황</td>
+                        <td colspan="2"><select name="now" id="now">
+                            <option value="매물">매물</option>
+                            <option value="진행중">진행중</option>
+                            <option value="완료">완료</option>
+                        </select>::수정창만</td>
                     </tr>
                     <tr>
                         <td>유형</td>
@@ -204,7 +209,7 @@
                         <td><input id="sellerPlus" type="button" value="+" /></td>
                     </tr>
                 </table>
-                <input type="submit" id="uploadSubmit" value="저장" />
+                <input type="submit" id="uploadSubmit" value="수정" />
             </form>
         </div>
     </div>

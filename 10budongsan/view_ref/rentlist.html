@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>전세 리스트</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>임대 리스트</title>
+    <link rel="stylesheet" href="../css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="wrapper">
         <div class="listheader">
-            <h2>전세 리스트</h2>
+            <h2>임대 리스트</h2>
             <select name="gu" id="gu" onchange="changeDong(this)">
                 <option>구 이름</option>
                 <option value="중구">중구</option>
@@ -43,28 +43,28 @@
                     <th>종류</th>
                     <th>주소</th>
                     <th colspan="2">크기</th>
-                    <th>전세금</th>
-                    <th>관리비</th>
+                    <th>보증금</th>
+                    <th>월세</th>
                 </tr>
                 <tr>
                     <td><input type="hidden" name="seq" value="2">
-                        <input type="hidden" name="case" value="jeonsae">
+                        <input type="hidden" name="case" value="rent">
                         아파트</td>
                     <td>남부민동</td>
                     <td>138.84㎡</td>
                     <td>42평</td>
-                    <td>3억</td>
-                    <td>10만원</td>
+                    <td>5천</td>
+                    <td>50만원</td>
                 </tr>
                 <tr>
                     <td><input type="hidden" name="seq" value="3">
-                        <input type="hidden" name="case" value="jeonsae">
+                        <input type="hidden" name="case" value="rent">
                         빌라</td>
                     <td>토성동</td>
                     <td>211.57㎡</td>
                     <td>64평</td>
-                    <td>6억7천</td>
-                    <td>20만원</td>
+                    <td>8천</td>
+                    <td>80만원</td>
                 </tr>
             </table>
         </div>

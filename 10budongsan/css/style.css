@@ -1,5 +1,4 @@
 * { margin: 0; padding: 0; font: normal 12px arial; }
-body { background: #eae3e3; }
 ul, ol { list-style: none; color: #3a3333; }
 ul { overflow: hidden; }
 a { text-decoration: none; color: #111; }
@@ -16,31 +15,31 @@ a:hover, a:active, a:focus { text-decoration:none; }
     border-radius: 13px;
 }
 .login_form input {
-    font-size: 12px;
+    font-size: 1.8em;
     line-height: 1.5;
-    width: 185px;
-    height: 26px;
+    width: 192px;
+    height: 36px;
     color: #888;
     position: absolute;
     background: #fff;
 }
 .login_form input:nth-child(1){
-    left: 15px;
-    top: 30px;
+    left: 7px;
+    top: 20px;
     padding-left: 12px;
 }
 .login_form input:nth-child(2){
-    left: 15px;
+    left: 7px;
     top: 59px;
     padding-left: 12px;
 }
 .login_form input:nth-child(3){
     float: left;
-    width: 70px;
-    height: 59px;
-    top: 30px;
-    right: 15px;
-    background: #20366b;
+    width: 80px;
+    height: 79px;
+    top: 20px;
+    right: 6px;
+    background: #33425b;
     color: #fff;
     border-style: hidden;
 }
@@ -52,6 +51,7 @@ a:hover, a:active, a:focus { text-decoration:none; }
 }
 .wrapper img {
     width: 100%;
+    box-shadow: 1px 3px 10px 0 rgba(0, 0, 0, 0.4);
 }
 .dashboard {
     width: 100%;
@@ -66,23 +66,26 @@ a:hover, a:active, a:focus { text-decoration:none; }
     text-align: center;
     padding-top: 20px;
 }
-.dashboard a:nth-child(1) { background-image: linear-gradient(#20366b, #42426d); } 
-.dashboard a:nth-child(2) { background-image: linear-gradient(#20366b, #42426d); } 
-.dashboard a:nth-child(3) { background-image: linear-gradient(#56486f, #8c5b72); } 
-.dashboard a:nth-child(4) { background-image: linear-gradient(#56486f, #8c5b72); } 
-.dashboard a:nth-child(5) { background-image: linear-gradient(#bb6c75, #dd7777); } 
-.dashboard a:nth-child(6) { background-image: linear-gradient(#bb6c75, #dd7777); } 
+.dashboard a:nth-child(1) { background: #45c5a4; } 
+.dashboard a:nth-child(2) { background: #ff9846; } 
+.dashboard a:nth-child(3) { background: #3cb1fc; } 
+.dashboard a:nth-child(4) { background: #ca62df; } 
+.dashboard a:nth-child(5) { background: #fe5e5e; } 
+.dashboard a:nth-child(6) { background: #5970c8; } 
 .dashbtn {
     width: 40%;
     height: 70px;
-    border-radius: 10px;
-    background: #20366b;
     color: #fff;
     margin: 5%;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.55);
+    box-shadow: 1px 3px 10px 0 rgba(0, 0, 0, 0.4);
 }
-.dashbtn:hover {
-    background: #dd7777;
+.dashboard a:nth-child(1):hover,
+.dashboard a:nth-child(2):hover,
+.dashboard a:nth-child(3):hover,
+.dashboard a:nth-child(4):hover,
+.dashboard a:nth-child(5):hover,
+.dashboard a:nth-child(6):hover {
+    background: #33425b;
     transition: 0.2s;
 }
 .dashmybtn {
@@ -95,12 +98,12 @@ a:hover, a:active, a:focus { text-decoration:none; }
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 10px;
-    border: 1px solid #20366b;
-    background: #fdf8f8;
+    border: 1px solid #173a8c;
+    background: #f8fbfd;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.55);
 }
 .uploadrCard table, .uploadrCard th, .uploadrCard td {
-    border-bottom: 1px solid #20366b;
+    border-bottom: 1px solid #173a8c;
 }
 .uploadrCard td {
     font-size: 1.7em;
@@ -154,11 +157,18 @@ a:hover, a:active, a:focus { text-decoration:none; }
 .uploadrCard #connect td:nth-child(4) input { width: 98%; }
 
 /* list */
-.listheader { margin-bottom: 5px; }
+.listheader {
+    margin-bottom: 5px;
+    background: #33425b;
+    color: #fff;
+    padding: 5px;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 6px 0 rgba(0, 0, 0, 0.4);
+}
 .listheader h2 {
     text-align: center;
     font-size: 3em;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 .listheader select {
     height: 35px;
@@ -172,59 +182,83 @@ button {
     float: right;
     margin-left: 3px;
 }
-.list table {
+.list table, .mylist table {
     width: 100%;
     border-collapse: collapse; 
-    background: #fdf8f8;
+    background: #f8fbfd;
+    box-shadow: 0px 1px 6px 0 rgba(0, 0, 0, 0.4);
 }
-.list table tr:hover {
+.list table tr:hover, .mylist table tr:hover {
     background: #fff;
     cursor: pointer;
 }
-.list table tr:nth-child(1):hover {
+.list table tr:nth-child(1):hover, .mylist table tr:nth-child(1):hover {
     background: none;
     cursor: default;
 }
-.list table tr th {
+.list table tr th, .mylist table tr th {
     width: 17%;
     font-size: 1.3em;
     border-bottom: 3px solid #20366b;
     padding: 4px 0;
 }
-.list table tr th:nth-child(3){
+.list table tr th:nth-child(3), .mylist table tr th:nth-child(4){
     width: 32%;
 }
-.list table tr td {
+.list table tr td, .mylist table tr td {
     text-align: right;
     font-size: 1.2em;
     border-bottom: 1px solid #20366b;
     padding: 4px 0;
 }
-.list table tr td:nth-child(1) {
+.list table tr td:nth-child(1), 
+.list table tr td:nth-child(2),
+.mylist table tr td:nth-child(1),
+.mylist table tr td:nth-child(2),
+.mylist table tr td:nth-child(3) {
     text-align: center;
 }
-.list table tr td:nth-child(2) {
-    text-align: center;
+.list table tr td:nth-child(6), 
+.mylist table tr td:nth-child(6) {
+    padding-right: 3px;
+}
+.listheader .veiwAll {
+    width: 10%;
+    height: 35px;
+    font-size: 1.1em;
+    float: right;
+    margin-left: 3px;
 }
 
 /* view */
 .view table {
     margin: 6px 0;
     width: 100%;
-    background: #fdf8f8;
+    background: #f8fbfd;
     border-collapse: collapse; 
+    box-shadow: 0px 1px 6px 0 rgba(0, 0, 0, 0.4);
 }
 .view table tr td {
     font-size: 2em;
     padding: 6px 0;
-    border-bottom: 1px solid #20366b;
+    border-bottom: 1px solid #173a8c;
 }
 .view table tr td span { font-size: 1em; }
 .view table tr td:nth-child(1) {
-    color: #888;
+    color: #989898;
     text-align: center;
     width: 35%;
+    font-size: 1.6em;
+    font-weight: 600;
 }
 .view table tr td:nth-child(2) {
     font-size: 1.6em;
+}
+.view button, .view input {
+    width: 18%;
+    height: 35px;
+    font-size: 1.1em;
+    float: right;
+    margin-left: 3px;
+    margin-bottom: 5px;
 }

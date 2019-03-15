@@ -31,22 +31,49 @@ $('input[type="text"]').keydown(function() {
 $("input:text[numberOnly]").on("keyup", function() {
     $(this).val($(this).val().replace(/[^0-9.]/g,""));
 });
-// 담당자, 명의자 추가 삭제
-$('#managerPlus').bind('click', function(){
-    var managerInner = '<tr><td>담당자</td><td><input type="text"></td><td><input type="text"></td><td><input id="managerMinus" type="button" value="-" /></td></tr>';
-    $(this).closest('tr').after(managerInner);
-})
-$(document).on('click','#managerMinus',function(){
-    $(this).closest('tr').remove();
+
+$(document).ready(function(){
+    var managerCount = 1;
+    var sellerCount = 1;
+
+    // 담당자 추가 삭제
+    $('#managerPlus').bind('click', function(){
+        managerCount += 1;
+
+        var manager = $(this).parent().parent();
+        var managerClone = manager.clone();
+        managerClone.find('input').val('');
+        managerClone.find('input').attr('name','manager'+managerCount);
+        managerClone.find('#managerPlus').attr('value','-');
+        managerClone.find('#managerPlus').attr('id','managerMinus');
+        
+        $(this).closest('tr').after(managerClone);
+    })
+    $(document).on('click','#managerMinus',function(){
+        managerCount -= 1;
+        $(this).closest('tr').remove();
+    })
+
+    // 명의자 추가 삭제
+    $('#sellerPlus').bind('click',function(){
+        sellerCount += 1;
+
+        var seller = $(this).parent().parent();
+        var sellerClone = seller.clone();
+        sellerClone.find('input').val('');
+        sellerClone.find('select').attr('name','seller'+sellerCount);
+        sellerClone.find('input').attr('name','seller'+sellerCount);
+        sellerClone.find('#sellerPlus').attr('value','-');
+        sellerClone.find('#sellerPlus').attr('id','sellerMinus');
+        
+        $(this).closest('tr').after(sellerClone);
+    })
+    $(document).on('click','#sellerMinus',function(){
+        sellerCount -= 1;
+        $(this).closest('tr').remove();
+    })
 })
 
-$('#sellerPlus').bind('click',function(){
-    var sellerInner = '<tr><td><select name="seller" id="seller"><option value="명의자">명의자</option><option value="관리자">관리자</option></select></td><td><input type="text"></td><td><input type="text"></td><td><input id="sellerMinus" type="button" value="-" /></td></tr>';
-    $(this).closest('tr').after(sellerInner);
-})
-$(document).on('click','#sellerMinus',function(){
-    $(this).closest('tr').remove();
-})
 // 메인카드 제곱미터 ↔ 평형
 $('.mSMeter').on('keyup',function(){
     var mSMter = $(this).val();
@@ -66,21 +93,10 @@ $(document).on('keyup','.sMeter',function(){
 })
 // form 두개 submit
 $('#uploadSubmit').on('click', function(){
-    var form1='';
-    $.each($('.uploadForm1').serializeArray(), function(key,val){
-        // 각 요소의 name 을 키로, value를 값으로 지정
-        form1+= ',"'+val['name']+'":"'+val['value']+'"';
-    })
-    // form1 데이터 보내서 저장
+    var form1=JSON.stringify($('.uploadForm1').serializeObject());
     console.log(form1);
 
-    var form2='';
-    $.each($('.uploadForm2').serializeArray(), function(key,val){
-        // 각 요소의 name 을 키로, value를 값으로 지정
-        form2+= ',"'+val['name']+'":"'+val['value']+'"';
-    })
-    // form2는 리스트로 저장해야함ㄷㄷ
-
+    var form2=JSON.stringify($('.uploadForm2').serializeObject());
     console.log(form2);
 
     // json으로 만들어 ajax를 통해 form1, form2 업로드

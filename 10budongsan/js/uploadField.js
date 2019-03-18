@@ -43,6 +43,7 @@ $(document).ready(function(){
         var manager = $(this).parent().parent();
         var managerClone = manager.clone();
         managerClone.find('input').val('');
+        managerClone.find('input:first').val('1');
         managerClone.find('input').attr('name','manager'+managerCount);
         managerClone.find('#managerPlus').attr('value','-');
         managerClone.find('#managerPlus').attr('id','managerMinus');

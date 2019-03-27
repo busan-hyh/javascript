@@ -40,10 +40,15 @@ router.post('/', function(req, res, next){
     var content = req.body.inputtext;
     var sql = "INSERT INTO `TODO_LIST` (uid, content) VALUE (?, ?)";
 
-    conn.query(sql,[uid,content],function(err,rows,fields){
-        if(err) throw err;
-        res.redirect('/list');
-    });
+    if(uid){
+        conn.query(sql,[uid,content],function(err,rows,fields){
+            if(err) throw err;
+            res.redirect('/list');
+        });
+    } else {
+        res.redirect('/');
+    }
+    
 });
 
 module.exports = router;

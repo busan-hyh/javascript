@@ -1,4 +1,4 @@
-var urlPath = 'http://localhost:3000'
+var urlPath = 'http://35.243.64.219:3000'
 
 $("#dolist li").on('click', function(){
     var seq = $(this).children('input')[0].value; // seq 넘버

@@ -20,7 +20,7 @@ app.use(session({
 
 // 모듈 호출
 var login = require('./route/login');
-app.use('/', login);
+app.use('/todo', login);
 var list = require('./route/list');
 app.use('/list', list);
 var doToDone = require('./route/doToDone');

@@ -1,4 +1,4 @@
-var urlPath = 'http://localhost:3000'
+var urlPath = 'http://35.243.64.219:3000'
 
 $('#dolist span').on('click', function(){
     var parent = $(this).parent();
